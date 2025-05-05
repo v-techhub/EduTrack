@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": "0903",
+      "name": "John Doe",
+      "email": "john@email.co",
+      "enrollmentStatus": "Alumni",
+      "profilePhoto": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FEduTrack-0b81097c-37c5-4392-a918-fbab3212f3b0/ImagePicker/fe2a2bf7-90b2-477a-af4c-843d8b639a11.jpeg"
+    },
+    {
+      "id": "f578",
+      "name": "Mary Baker",
+      "email": "mary@email.com",
+      "enrollmentStatus": "Graduated",
+      "profilePhoto": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252FEduTrack-0b81097c-37c5-4392-a918-fbab3212f3b0/ImagePicker/39444203-0379-4e78-872c-ba817569f825.jpeg"
+    }
+  ]
+}

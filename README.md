@@ -1,50 +1,154 @@
-# Welcome to your Expo app 👋
+# EduTrack
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A comprehensive mobile application for tracking student information.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Student Management**
+
+  - Add and remove student profiles
+  - Store comprehensive student information
+  - Search and filter capabilities
+
+- **User-Friendly Interface**
+  - Intuitive mobile design
+  - Quick access to frequently used features
+  - Responsive layout for different device sizes
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v16.0.0 or later)
+- npm (v8.0.0 or later)
+- React Native environment setup (follow [official documentation](https://reactnative.dev/docs/environment-setup))
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/edutrack.git
+   cd edutrack
+   ```
+
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Configure environment**
 
    ```bash
-   npx expo start
+   # Copy the example environment file
+   cp .env.example .env
+
+   # Edit the .env file with your configuration
    ```
 
-In the output, you'll find options to open the app in a
+4. **Run the application**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   # For iOS
+   npm run ios
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   # For Android
+   npm run android
+   ```
 
-## Get a fresh project
+### Testing
 
-When you're ready, run:
+This project uses Jest for testing. To run tests:
 
 ```bash
-npm run reset-project
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Project Structure
 
-## Learn more
+```
+edutrack/
+├── __test__/             # Test files
+├── .expo/                # Expo configuration
+├── .vscode/              # VS Code settings
+├── android/              # Android platform files
+├── app/                  # Main application code
+├── assets/               # Images, fonts, and other static assets
+├── components/           # Reusable React components
+├── constants/            # Application constants and configuration
+├── data/                 # Data models and sample data
+├── hooks/                # Custom React hooks
+├── node_modules/         # Dependencies
+├── storage/              # Data storage utilities
+├── types/                # TypeScript type definitions
+├── utilities/            # Helper functions and utilities
+├── .gitignore            # Git ignore configuration
+├── app.json              # Expo app configuration
+├── eslint.config.js      # ESLint configuration
+├── expo-env.d.ts         # Expo environment type definitions
+├── package-lock.json     # Lock file for dependencies
+├── package.json          # Project dependencies and scripts
+├── README.md             # Project documentation
+└── tsconfig.json         # TypeScript configuration
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Development Guidelines
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Component Creation
 
-## Join the community
+- Use functional components with hooks
+- Create TypeScript interfaces for all props
+- Follow the container/presentation pattern when appropriate
 
-Join our community of developers creating universal apps.
+### State Management
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The application uses a combination of:
+
+- Local component state for UI-specific state
+- AsyncStorage for persistent data
+
+## Known Issues and Limitations
+
+- **Large Datasets**: Performance may degrade with extremely large student datasets (500+ records)
+- **Media Attachments**: Currently limited to 10MB per attachment
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Jest Test Failures**
+
+   - Ensure you have the latest version of Jest and ts-jest
+   - Check that path aliases in tsconfig.json match those in jest.config.js
+
+2. **Build Errors**
+
+   - Clear the cache with `npm run clean`
+   - Ensure all dependencies are correctly installed
+
+3. **Import Errors**
+   - Verify that path aliases are correctly set up in both TypeScript and Jest configurations
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- Cyzygy Digital & Media Co.
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
