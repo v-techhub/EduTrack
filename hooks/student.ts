@@ -4,8 +4,7 @@ import { Student } from "@/types";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const URL = "http://172.20.10.3:8000";
-// const URL = "http://localhost:8000";
+const URL = "http://localhost:8000";
 
 const axiosInstance = axios.create({
   baseURL: URL,
